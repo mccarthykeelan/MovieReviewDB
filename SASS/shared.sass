@@ -1,0 +1,85 @@
+body
+  display: flex
+  flex-direction: column
+
+// Card Section Styling
+.card_section
+  padding-top: 30px
+  .content_wrapper
+    display: flex
+    flex-direction: column
+    .content_title h2
+      font-size: 24px
+    .content
+      padding: 20px 0
+
+// Card Styling
+.card--style_1
+  width: 150px
+  min-width: 150px
+  border: none
+  .wrapper
+    display: inline-block
+    width: 100%
+    height: 100%
+    img
+      display: inline-block
+      height: 100%
+      width: 100%
+      border-radius: 8px
+  .content
+    padding: 26px 10px 10px 0
+    h2, p
+      margin: 0
+    h2
+      font-size: 16px
+      a
+        color: #000
+        text-decoration: none
+        &:hover
+          text-decoration: none
+          color: rgb(1, 180, 228)
+    p
+      color: #6c757d
+
+// Scroller Styling
+.scroller
+  display: flex
+  flex-shrink: 0
+  overflow-x: auto
+  padding: 20px 0
+  .card--style_1
+    margin-left: 20px
+    &:first-child
+      margin-left: 40px
+
+.scroller::-webkit-scrollbar
+  height: 8px
+  width: 8px
+
+.scroller::-webkit-scrollbar-thumb
+  background-color: #dbdbdb
+  border-radius: 20px
+
+.scroller::webkit-scrollbar-track
+  background: transparent
+
+  // TO WORK ON LATER
+// .should_fade
+//   content: ''
+//   width: 60px
+//   height: 100%
+//   position: absolute
+//   top: 0
+//   right: 0
+//   background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, #fff 100%)
+//   will-change: opacity
+//   pointer-events: none
+
+// .is_fading
+//   transition: linear 0.3s
+//   opacity: 1
+
+// .is_hidden
+//   transition: linear 0.3s
+//   opacity: 0

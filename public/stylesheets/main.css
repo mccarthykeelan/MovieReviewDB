@@ -1,0 +1,46 @@
+#hero-section .hero {
+  min-height: 300px;
+  height: auto;
+  max-height: 360px;
+  background-image: url("../images/breaking-bad.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 80%;
+}
+#hero-section .hero .wrapper {
+  width: 100%;
+  padding: 40px 30px;
+}
+#hero-section .hero__title {
+  color: #fff;
+}
+#hero-section .hero__title h2, #hero-section .hero__title h3 {
+  margin: 0;
+}
+#hero-section .hero #search_form {
+  margin-top: 20px;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#hero-section .hero #search_form label {
+  display: flex;
+}
+#hero-section .hero #search_form .form-control {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 0;
+}
+#hero-section .hero #search_form .btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+#hero-section .dark-overlay {
+  height: auto;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=main.css.map */

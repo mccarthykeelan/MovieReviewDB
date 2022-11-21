@@ -1,0 +1,356 @@
+extends layout
+
+block append head 
+  link(rel='stylesheet', href='/stylesheets/main.css')
+
+block content
+  header#hero-section.container
+    .hero.d-flex
+      .dark-overlay.d-flex.align-items-center
+        .wrapper 
+          .hero__title 
+            h2 Welcome.
+            h3 Millions of movies, TV shows to discover. 
+              span.text-nowrap Explore now.
+          .hero__search 
+            form#search_form(action='/search', method='GET')
+              label
+                input.form-control#search-input(type='text' placeholder="Search for a movie, tv show...." aria-label="Movie or tv show title" aria-describedby='search-input')           
+              button.btn(type='submit') Search
+  main.container
+    section#popular.card_section
+      .content_wrapper
+        .content_title 
+          h2 Whats Popular
+        .content 
+          .scroller
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+
+    section#trending.card_section
+      .content_wrapper
+        .content_title 
+          h2 Whats Trending
+        .content 
+          .scroller
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+
+        section#popular.card_section
+      .content_wrapper
+        .content_title 
+          h2 Free To Watch
+        .content 
+          .scroller
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+            .card.card--style_1 
+              .card__image
+                a.wrapper(href='#')
+                  img(src='/images/Game of Thrones.jpg')
+              .content
+                h2
+                  a(href='') Game of Thrones
+                p 25 Sep 2017
+
+
+
+    

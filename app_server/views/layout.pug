@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    block head
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel='stylesheet', href='/stylesheets/shared.css')
+  body
+    nav.navbar.navbar-expand-sm.bg-dark.navbar-dark 
+      .container
+        a.navbar-brand(href='/') MovieReviewDB 
+        button.navbar-toggler(data-toggle='collapse', data-target='#navbarCollapse')
+          span.navbar-toggler-icon
+        .collapse.navbar-collapse#navbarCollapse
+          div.w-100.d-flex.flex-column.flex-align-items-start.flex-sm-row.align-items-sm-center.justify-content-sm-between
+            ul.navbar-nav.order-2.order-sm-1
+              li.nav-item 
+                a.nav-link(href='/movies') Movies
+              li.nav-item 
+                a.nav-link(href='/movies') TV Shows
+              li.nav-item 
+                a.nav-link(href='/movies') More
+            ul.navbar-nav.order-1.order-sm-2
+              li.nav-item
+                a.nav-link.d-none(href='/login') Login
+              li.nav-item
+                a.nav-link.d-none(href='/register') Join
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle.d-flex.align-items-center(data-toggle='dropdown' href='#' role='button' aria-haspopup='true' aria-expanded='false')
+                  i.fa.fa-user.fa-2x.mr-1
+                  | Username
+                .dropdown-menu
+                  a.dropdown-item(href='/profile') Profile
+                  a.dropdown-item(href='/favourites') Favourites
+                  a.dropdown-item(href='/my-reviews') My Reviews
+                  a.dropdown-item(href='/logout') Logout
+    block content
+    footer.bg-dark.text-center.text-white.mt-auto
+      .container.p-4.pb-0 
+        section.mb-4
+          a.btn.text-white.btn-floating.m-1(style='background-color: #3b5998' href='#!' role='button')
+            i.fa.fa-facebook-f
+          a.btn.text-white.btn-floating.m-1(style='background-color: #55acee' href='#!' role='button')
+            i.fa.fa-twitter
+          a.btn.text-white.btn-floating.m-1(style='background-color: #ac2bac' href='#!' role='button')
+            i.fa.fa-instagram
+          a.btn.text-white.btn-floating.m-1(style='background-color: #0082ca' href='#!' role='button')
+            i.fa.fa-linkedin
+          a.btn.text-white.btn-floating.m-1(style='background-color: #333333' href='#!' role='button')
+            i.fa.fa-github
+      .text-center.p-3(style='background-color: rgba(0, 0, 0, 0.2)')
+        | &copy; 2022 MovieDB
+
+
+    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
+    script(src='/javascripts/bootstrap.min.js')
