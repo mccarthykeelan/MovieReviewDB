@@ -1,6 +1,7 @@
-body {
+html, body {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .card_section {
@@ -79,4 +80,8 @@ body {
 
 .scroller::webkit-scrollbar-track {
   background: transparent;
+}
+
+footer {
+  margin-top: auto;
 }/*# sourceMappingURL=shared.css.map */
