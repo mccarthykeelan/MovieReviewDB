@@ -16,340 +16,53 @@ block content
             form#search_form(action='/search', method='GET')
               label
                 input.form-control#search-input(type='text' placeholder="Search for a movie, tv show...." aria-label="Movie or tv show title" aria-describedby='search-input')           
-              button.btn(type='submit') Search
+              button.btn.btn-secondary(type='submit') Search
   main.container
     section#popular.card_section
       .content_wrapper
         .content_title 
-          h2 Whats Popular
+          h2= popular.title
         .content 
           .scroller
+           each movie in popular.movies
             .card.card--style_1 
               .card__image
                 a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
+                  img(src= movie.poster)
               .content
                 h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-
+                  a(href='')= movie.title
+                p= movie.releaseDate
     section#trending.card_section
       .content_wrapper
         .content_title 
-          h2 Whats Trending
+          h2= trending.title
         .content 
           .scroller
+           each movie in trending.movies 
             .card.card--style_1 
               .card__image
                 a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
+                  img(src= movie.poster)
               .content
                 h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-
-        section#popular.card_section
+                  a(href='')= movie.title
+                p= movie.releaseDate
+    section#free.card_section
       .content_wrapper
         .content_title 
-          h2 Free To Watch
+          h2= freeWatch.title
         .content 
           .scroller
+           each movie in freeWatch.movies
             .card.card--style_1 
               .card__image
                 a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
+                  img(src= movie.poster)
               .content
                 h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
-            .card.card--style_1 
-              .card__image
-                a.wrapper(href='#')
-                  img(src='/images/Game of Thrones.jpg')
-              .content
-                h2
-                  a(href='') Game of Thrones
-                p 25 Sep 2017
+                  a(href='')= movie.title
+                p= movie.releaseDate
 
 
 

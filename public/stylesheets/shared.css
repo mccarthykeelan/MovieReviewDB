@@ -4,17 +4,18 @@ html, body {
   height: 100%;
 }
 
-.card_section {
-  padding-top: 30px;
-}
-.card_section .content_wrapper {
+.content_wrapper {
   display: flex;
   flex-direction: column;
 }
-.card_section .content_wrapper .content_title h2 {
+
+.card_section {
+  padding-top: 30px;
+}
+.card_section .content_title h2 {
   font-size: 24px;
 }
-.card_section .content_wrapper .content {
+.card_section .content {
   padding: 20px 0;
 }
 
@@ -80,6 +81,14 @@ html, body {
 
 .scroller::webkit-scrollbar-track {
   background: transparent;
+}
+
+#form_wrapper.content_wrapper {
+  padding: 30px 40px;
+}
+#form_wrapper .reset_password {
+  margin-bottom: 0;
+  margin-left: 10px;
 }
 
 footer {

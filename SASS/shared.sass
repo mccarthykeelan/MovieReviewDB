@@ -3,16 +3,17 @@ html, body
   flex-direction: column
   height: 100%
 
+.content_wrapper
+  display: flex
+  flex-direction: column
+
 // Card Section Styling
 .card_section
   padding-top: 30px
-  .content_wrapper
-    display: flex
-    flex-direction: column
-    .content_title h2
-      font-size: 24px
-    .content
-      padding: 20px 0
+  .content_title h2
+    font-size: 24px
+  .content
+    padding: 20px 0
 
 // Card Styling
 .card--style_1
@@ -65,6 +66,12 @@ html, body
 .scroller::webkit-scrollbar-track
   background: transparent
 
+#form_wrapper
+  &.content_wrapper
+    padding: 30px 40px
+  .reset_password
+    margin-bottom: 0
+    margin-left: 10px
 footer
   margin-top: auto
 

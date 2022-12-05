@@ -1,21 +1,26 @@
 extends layout
 
 block content
-  main
-    .container
-      .row
-        .col-12
-          h1 Register
-      .row
-        .col-12
-          form(action="/register" method="post")
-            .form-group
-              label(for="email") Email address
-              input#email.form-control(type="email" name="email" placeholder="Enter email")
-            .form-group
-              label(for="password") Password
-              input#password.form-control(type="password" name="password" placeholder="Password")
-            .form-group
-              label(for="passwordConfirm") Confirm Password
-              input#passwordConfirm.form-control(type="password" placeholder="Confirm Password")
-            button.btn.btn-primary.btn-block(type="submit") Register
+  main#main
+    section.container
+      #form_wrapper.content_wrapper
+        .content
+          h2 Sign up for an account
+          p Signing up for an account is free and easy. Fill out the form below to get started. JavaScript is required to to continue.
+          form(action="/login" method="post")
+            .mb-3
+              label(for="email") Username
+              input#email.form-control(type="email" name="email" placeholder="")
+            .mb-3
+              label(for="password") Password (4 characters minimum)
+              input#password.form-control(type="password" name="password" placeholder="")
+            .mb-3
+              label(for="email") Confirm Password
+              input#email.form-control(type="email" name="email" placeholder="")
+            .mb-3
+              label(for="email") Email
+              input#email.form-control(type="email" name="email" placeholder="")
+            .d-flex.align-items-center
+              input(type="submit", value="Login", class="btn btn-primary")
+              p.reset_password 
+                a(href="/reset_password") Forgot your password?

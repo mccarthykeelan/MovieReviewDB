@@ -1,3 +1,151 @@
 extends layout
 
+block append head 
+  link(rel='stylesheet', href='/stylesheets/movie.css')
+
 block content
+  header#header
+    .shortcut_bar.d-none.d-sm-block
+      ul.navbar-nav
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#' type="button" data-bs-toggle="dropdown") Overview
+          ul.dropdown-menu
+            li.dropdown-item
+              a.nav-link(href='#') Main
+            li.dropdown-item
+              a.nav-link(href='#') Alternative Titles
+            li.dropdown-item
+              a.nav-link(href='#') Cast & Crew
+            li.dropdown-item
+              a.nav-link(href='#') Release Dates
+            li.dropdown-item
+              a.nav-link(href='#') Translations
+            li.dropdown-item
+              a.nav-link(href='#') Watch Now
+            li.dropdown-item 
+              a.nav-link(href='#') Changes
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#' type="button" data-bs-toggle="dropdown") Media
+          ul.dropdown-menu
+            li.dropdown-item
+              a.nav-link(href='#') Backdrops
+            li.dropdown-item
+              a.nav-link(href='#') Logos
+            li.dropdown-item
+              a.nav-link(href='#') Posters
+            li.dropdown-item
+              a.nav-link(href='#') Videos
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#' type="button" data-bs-toggle="dropdown") Fandom
+          ul.dropdown-menu
+            li.dropdown-item 
+              a.nav-link(href='#') Discussions
+            li.dropdown-item 
+              a.nav-link(href='#') Reviews
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href='#' type="button" data-bs-toggle="dropdown") Share
+          ul.dropdown-menu
+            li.dropdown-item 
+              a.nav-link(href='#') Share Link
+            li.dropdown-item 
+              a.nav-link(href='#') Facebook
+            li.dropdown-item
+              a.nav-link(href='#') Tweet
+  section#movie-info.bg-dark
+    .content_wrapper 
+      .content.flex-column.flex-md-row
+        .poster_wrapper
+          img(class='img-fluid' src=movie.poster)
+        .info_wrapper.d-flex.align-items-md-center.mt-md-0
+          .content
+            .title 
+              h2= movie.title
+                span.year (#{movie.releaseDate})
+              .facts
+                span.certification= movie.certification
+                span.genres= movie.genres
+                span.runtime= movie.runtime
+            ul.actions
+              li.chart
+                .chart__ui
+                .chart__text 
+                  |User <br> Score
+              li(data-toggle="tooltip" data-placement="bottom" title="Add to list").action 
+                a.btn.btn--action(href="#")
+                  i.fa.fa-list
+              li(data-toggle="tooltip" data-placement="bottom" title="Add as favourite").action
+                a.btn.btn--action(href="#")
+                  i.fa.fa-heart
+              li(data-toggle="tooltip" data-placement="bottom" title="Add to your watchlist").action
+                a.btn.btn--action(href="#")
+                  i.fa.fa-bookmark
+              li(data-toggle="tooltip" data-placement="bottom" title="Rate it!").action 
+                a.btn.btn--action(href="#")
+                  i.fa.fa-star
+              li.action
+                a.btn.btn-link(href='#')
+                  i.fa.fa-play
+                  | Play Trailer
+            .info
+              h3.tagline= movie.tagline
+              h3 Overview
+              .overview 
+                p= movie.overview
+              ol.people
+               each person in movie.people
+                li.profile
+                  p= person.name
+                  p.charactor person.role
+  section#review 
+    .container 
+      #add_review 
+        .content_wrapper 
+          .content 
+            h2 Add a review
+            form(action="/add-review" method="post")
+              .form-group.mb-3
+                label(for="title") Title
+                input#review_title.form-control(type="text" name="title" placeholder="Enter title")
+              .form-group.mb-3
+                label(for="review") Review
+                textarea#review_text.form-control(type="text" name="review" placeholder="Enter review")
+              .form-group.mb-3
+                label(for="rating") Rating
+                select#rating.form-control(name="rating")
+                  option(value="1") 1
+                  option(value="2") 2
+                  option(value="3") 3
+                  option(value="4") 4
+                  option(value="5") 5
+                  option(value="6") 6
+                  option(value="7") 7
+                  option(value="8") 8
+                  option(value="9") 9
+                  option(value="10") 10
+              .form-group.mb-3
+                input(type="submit", value="Submit", class="btn btn-primary")
+      hr
+      #review_list 
+        .content_wrapper 
+          .content 
+            h2 Reviews
+           each review in reviews
+            .review 
+              .review__header 
+                .review__title 
+                  h5= review.title
+                  .review__rating
+                    i.fa.fa-star
+                    | 10.0
+                p.text-muted Written by 
+                    a(href='#')= review.author
+                    |  on #{review.date}
+              .review__body 
+                p= review.reviewText
+
+
+
+
+
+
+    
